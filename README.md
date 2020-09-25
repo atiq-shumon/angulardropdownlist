@@ -8,7 +8,7 @@ Let's display a slider component in your app and verify that everything works.
 
 #### You need to import the MatSliderModule that you want to display by adding the following lines to your app.module.ts file.
 
-`<mat-form-field appearance="fill">
+```<mat-form-field appearance="fill">
   <mat-label>Toppings</mat-label>
   <mat-select [formControl]="toppings" multiple>
     <mat-select-trigger>
@@ -19,4 +19,4 @@ Let's display a slider component in your app and verify that everything works.
     </mat-select-trigger>
     <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
   </mat-select>
-</mat-form-field>`
+</mat-form-field>```
