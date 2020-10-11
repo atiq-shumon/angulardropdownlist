@@ -2,6 +2,19 @@
 ### Dropdown link- select search link
 - [angular material select search link](https://www.npmjs.com/package/ngx-mat-select-search)
 - [angular material stackbiz example](https://stackblitz.com/edit/mat-select-search)
+```<div  [formGroup]="formGroup" style="width:100%;">
+    <mat-form-field style="width:100%;">
+        <mat-select  (selectionChange)="onSelectClicked($event.value)" id="companyctl" placeholder="Company"  [formControlName]="controlname" >
+          <mat-select-search #companyFilterCtrl></mat-select-search>
+           <mat-option *ngFor="let company of companies|filter:companyFilterCtrl.value" [value]="company.value">
+          {{company.display}}
+         </mat-option>
+         </mat-select>
+        </mat-form-field>
+
+      </div>Javascript
+
+```
 
 Display a component
 Let's display a slider component in your app and verify that everything works.
