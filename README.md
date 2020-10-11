@@ -1,5 +1,5 @@
 # Angular Material Components
-### angular material select search link
+### Dropdown link- select search link
 - [angular material select search link](https://www.npmjs.com/package/ngx-mat-select-search)
 - [angular material stackbiz example](https://stackblitz.com/edit/mat-select-search)
 
