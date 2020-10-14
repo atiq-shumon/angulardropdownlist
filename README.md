@@ -2,7 +2,7 @@
 ### Dropdown link- select search link
 - [angular material select search link](https://www.npmjs.com/package/ngx-mat-select-search)
 - [angular material stackbiz example](https://stackblitz.com/edit/mat-select-search)
-- [search form filter example](#filter-example)
+- [search/dropdown filter example](#filter-example)
 ```<div  [formGroup]="formGroup" style="width:100%;">
     <mat-form-field style="width:100%;">
         <mat-select  (selectionChange)="onSelectClicked($event.value)" id="companyctl" placeholder="Company"  [formControlName]="controlname" >
@@ -36,7 +36,7 @@ Let's display a slider component in your app and verify that everything works.
   </mat-select>
 </mat-form-field>```
 
-# filter example
+### filter example
 ``` Javascript
     serachInSmartCombo(data:string){
 
