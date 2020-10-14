@@ -40,16 +40,16 @@ Let's display a slider component in your app and verify that everything works.
 
 # filter example
 ``` Javascript
-    serachInSmartCombo(data:string){
+ serachInSmartCombo(data:string){
 
-  if(data.length>0) {
-    this.suppliers=this.suppliersbkp;
-    let filtered=this.suppliers.filter(vl=>vl.display.toUpperCase().indexOf(data.toUpperCase())!==-1);
-    this.suppliers=filtered;
-  }
-  else{
-    this.suppliers=this.suppliersbkp;
-  }
+              if(data.length>0) {
+                this.suppliers=this.suppliersbkp;
+                let filtered=this.suppliers.filter(vl=>vl.display.toUpperCase().indexOf(data.toUpperCase())!==-1);
+                this.suppliers=filtered;
+              }
+              else{
+                this.suppliers=this.suppliersbkp;
+              }
 
 }
 ```
