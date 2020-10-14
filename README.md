@@ -34,9 +34,11 @@ Let's display a slider component in your app and verify that everything works.
     </mat-select-trigger>
     <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
   </mat-select>
-</mat-form-field>```
+</mat-form-field>
 
-### filter example
+```
+
+# filter example
 ``` Javascript
     serachInSmartCombo(data:string){
 
