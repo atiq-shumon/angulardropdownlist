@@ -53,4 +53,12 @@ Let's display a slider component in your app and verify that everything works.
 
 }
 ```
-
+# setting default value
+```Javascript
+ngAfterViewInit(){
+  //console.log(JSON.parse(this.valuejson));
+  const toSelect = this.crieteria.find(c => c.value === '3');
+    // console.log(toSelect);
+     this.searchform.get('crieteria').setValue(toSelect.value);
+}
+```
