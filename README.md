@@ -66,6 +66,8 @@ ngAfterViewInit(){
 #### Dropdown list and service
 ---------------------------------------
 ```
+_serviceSubscription:Subscription;
+------------------------------------------------
 constructor( ......., private dropdowneventservice:DropdownEventService){
  this._serviceSubscription=this.dropdowneventservice.dropdownClicked.subscribe({
     next: (name: String) => {
