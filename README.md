@@ -62,3 +62,35 @@ ngAfterViewInit(){
      this.searchform.get('crieteria').setValue(toSelect.value);
 }
 ```
+
+#### Dropdown list and service
+---------------------------------------
+```
+constructor( ......., private dropdowneventservice:DropdownEventService){
+ this._serviceSubscription=this.dropdowneventservice.dropdownClicked.subscribe({
+    next: (name: String) => {
+        if(name==='CustomerId'){
+         // console.log(name);
+          //  var loctotal=this.formComponent.masterForm.controls['nettotal'].value;
+          //console.log(this.formComponent.paramForm.controls['param1'].value);
+          if(typeof this.formComponent.masterform.get('CustomerId')!=='undefined'){
+            // console.log('prod id');
+            // console.log(this.formComponent.masterform.get('prodId'));
+            //console.log(this.formComponent.masterformFieldConfig);
+           // const toSelect = this.formComponent.masterformFieldConfig[2].options.find(c => c.value == this.formComponent.masterform.get('CustomerId').value);
+            //  console.log(toSelect);
+
+              this.populateAlternateNames(this.formComponent.masterform.get('CustomerId').value);
+          }
+
+           // this.populateoptions(this.formComponent.paramForm.controls['param1'].value,this.formComponent.paramForm.controls['param2'].value);
+          }
+     }
+  });
+  
+  -------------------
+    ngOnDestroy(): void {
+    this._serviceSubscription.unsubscribe();
+  }
+```
+
