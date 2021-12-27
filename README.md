@@ -96,3 +96,22 @@ constructor( ......., private dropdowneventservice:DropdownEventService){
   }
 ```
 
+#### Dropdown Filter Split push
+```
+  // const toSelect = this.salesmodes.find(c => c.value === 'C');
+
+    //  this.searchform= new FormGroup({
+    //   crieteria: new FormControl('',Validators.required),
+    //   searchtext: new FormControl('',[Validators.required,Validators.minLength(2)])
+    // });
+    // let commentsloc=this.commentsstring.split("╛");
+    // //console.log(commentsloc);
+    //    commentsloc.forEach(commentstr => {
+    //    let com=commentstr.split('↕');
+    //  //  console.log(com);
+    //    if(com[0]!==''){
+
+    //    this.comments.push({'commentby':com[0],'timestamp':com[1],'contents':com[2],'status':com[3]});
+    //    }
+    // });
+```
