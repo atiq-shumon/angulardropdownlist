@@ -119,7 +119,15 @@ constructor( ......., private dropdowneventservice:DropdownEventService){
 
 ### Populating dropdownlist data leveraging JSON
 --------------------------------------------------------
+C#
+```C#
+var customer = new
+            {
+                CustomerId = depositmaster.Customer.CustomerId,
+                CustomerName = depositmaster.Customer.CustomerName
+            };
 ```
+```Javascript
 ngAfterViewInit(){
  // console.log(this.customerstring.split("~"));
   // for edit mode if values inputted while creating
