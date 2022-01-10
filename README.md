@@ -115,3 +115,21 @@ constructor( ......., private dropdowneventservice:DropdownEventService){
     //    }
     // });
 ```
+
+### Populating dropdownlist data JSON Format
+```
+ngAfterViewInit(){
+ // console.log(this.customerstring.split("~"));
+  // for edit mode if values inputted while creating
+  let custs= JSON.parse(this.fieldvalue);
+ // console.log(custs);
+  if(Object.keys(custs).length>0){
+     this.customers.push({value: custs.CustomerId,display: custs.CustomerName});
+     this.customersbkp=this.customers;
+     // const toSelect = this.customers.find(c => c.value === this.custs[0]);
+ //console.log( this.customers);
+  this.formGroup.get(this.controlname).setValue(this.customers[0].value);
+//  this.onSelectClicked(toSelect)
+  }
+}
+```
