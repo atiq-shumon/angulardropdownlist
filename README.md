@@ -1,5 +1,6 @@
 # Angular Material Components
-### Dropdown link- select search link
+### Dropdown link- select search link || [Populating dropdownlist data leveraging JSON](#Populating-dropdownlist-data-leveraging-JSON)
+
 - [angular material select search link](https://www.npmjs.com/package/ngx-mat-select-search)
 - [angular material stackbiz example](https://stackblitz.com/edit/mat-select-search)
 - [search/dropdown filter example](#filter-example)
@@ -116,7 +117,8 @@ constructor( ......., private dropdowneventservice:DropdownEventService){
     // });
 ```
 
-### Populating dropdownlist data JSON Format
+### Populating dropdownlist data leveraging JSON
+--------------------------------------------------------
 ```
 ngAfterViewInit(){
  // console.log(this.customerstring.split("~"));
