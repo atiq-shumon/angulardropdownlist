@@ -126,6 +126,8 @@ var customer = new
                 CustomerId = depositmaster.Customer.CustomerId,
                 CustomerName = depositmaster.Customer.CustomerName
             };
+   --------------------------         
+   fields.Add(new CompositeFormFieldJson("CustomerId", "", JsonConvert.SerializeObject(my_jsondata), "f", new Validation("true"), "ConsumerCustomerFieldComponent", "false"));            
 ```
 ```Javascript
 ngAfterViewInit(){
