@@ -69,6 +69,29 @@ ngAfterViewInit(){
 }
 ```
 
+## Populating with data
+```Javascript
+populateproducts(val:any){
+  let companyId=val;
+  this.products=[];
+  this.balancetransferformgroup.get("productid").setValue('');
+  let path=this.path+"/"+"sharedpage"+"/getproduct";
+  let json={ActionControlMode:'company_wise','Param1':companyId};
+  //console.log(json);
+ // console.log(path);
+  this.progressbar.start();
+  this.subscription=this.httpServices.postData(json,path).subscribe(data=>{
+   //console.log(data);
+    let ddldata=data.map(x=>({'value': x.productID,'display':x.productName}));
+    this.products=ddldata;
+  },(error:any)=>{this.toasterService.showToaster(error.toString(),'red-snackbar')},
+  ()=>{this.progressbar.stop();}
+
+    )
+  }
+```
+
+
 #### Dropdown list and service
 ---------------------------------------
 ```
