@@ -1,5 +1,5 @@
 # Angular Material Components
-### Dropdown link- select search link || [Populating dropdownlist data leveraging JSON](#Populating-dropdownlist-data-leveraging-JSON)
+### Dropdown link- select search link || [Populating dropdownlist data leveraging JSON](#Populating-dropdownlist-data-leveraging-JSON) || [Getting key value of Drop down list](#Getting-Key-value-of-Dropdownlist)
 
 - [angular material select search link](https://www.npmjs.com/package/ngx-mat-select-search)
 - [angular material stackbiz example](https://stackblitz.com/edit/mat-select-search)
@@ -144,4 +144,16 @@ ngAfterViewInit(){
 //  this.onSelectClicked(toSelect)
   }
 }
+```
+
+## Getting Key value of Dropdownlist
+-----------------------------------------
+```Javascript
+let types=this.paymenttypes.find(c => c.value === paymenttypeid);
+      //console.log(this.bankmasterdata);
+      let banks=(typeof v.bank!=='undefined')?this.bankmasterdata.find(c => c.value === v.bank):{display:'',value:''};
+  
+  let data={paymenttype: types.display,paymenttypeoid:types.value, amount: amount, reffnumber: reffnumber, date: date, bankname: banks.display,bankoid:banks.value
+        , branchname: branch};
+
 ```
